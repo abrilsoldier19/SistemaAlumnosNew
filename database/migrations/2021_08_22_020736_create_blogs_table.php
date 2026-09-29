@@ -12,10 +12,10 @@ class CreateBlogsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {            //si se quire cambiar a otro se cambia el texo 'blogs' por otro por ejemplo productos, atriculos etc...
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
+            $table->string('titulo'); // se crean las columnas 
             $table->text('contenido');
             $table->timestamps();
         });

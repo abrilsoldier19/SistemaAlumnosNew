@@ -192,6 +192,8 @@ return [
 
     'aliases' => [
 
+        'Maatwebsite\Excel\ExcelServiceProvider',
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

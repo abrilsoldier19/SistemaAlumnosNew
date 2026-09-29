@@ -1,3 +1,4 @@
+@can('crear-rol')
 @extends('layouts.app')
 
 @section('content')
@@ -10,7 +11,6 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                
             
                         @can('crear-blog')
                         <a class="btn btn-warning" href="{{ route('blogs.create') }}">Nuevo</a>
@@ -58,3 +58,5 @@
         </div>
     </section>
 @endsection
+
+@endcan

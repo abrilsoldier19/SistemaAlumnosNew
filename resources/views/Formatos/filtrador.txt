@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calificaciones por unidad</title>
+  <script>
+    function mostrarCalificaciones() {
+      var unidad1 = document.getElementById("unidad1").value;
+      var unidad2 = document.getElementById("unidad2").value;
+      var unidad3 = document.getElementById("unidad3").value;
+
+      document.getElementById("calificacion1").textContent =  unidad1;
+      document.getElementById("calificacion2").textContent = unidad2;
+      document.getElementById("calificacion3").textContent = unidad3;
+    }
+  </script>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Materias</th>
+      <th>Materia 1</th>
+      <th>Materia 2</th>
+      <th>Materia 3</th>
+      <tr>
+        <td>Unidades</td>
+      <td>
+        <select id="unidad1" onchange="mostrarCalificaciones()">
+          <option value="">Seleccione unidad</option>
+          <option value="10">Unidad 1</option>
+          <option value="8">Unidad 2</option>
+          <option value="9">Unidad 3</option>
+        </select>
+
+      </td>
+      <td>
+        <select id="unidad2" onchange="mostrarCalificaciones()">
+          <option value="">Seleccione unidad</option>
+          <option value="7">Unidad 1</option>
+          <option value="6">Unidad 2</option>
+          <option value="8">Unidad 3</option>
+        </select>
+        
+      </td>
+      <td>
+        <select id="unidad3" onchange="mostrarCalificaciones()">
+          <option value="">Seleccione unidad</option>
+          <option value="9">Unidad 1</option>
+          <option value="8">Unidad 2</option>
+          <option value="7">Unidad 3</option>
+        </select>
+      </td>
+      </tr>
+    </tr>
+    <tr>
+      <td>Abril Mejía</td>
+      <td id="calificacion1"></td>
+      <td id="calificacion2"></td>
+      <td id="calificacion3"></td>
+    </tr>
+  </table>
+</body>
+</html>

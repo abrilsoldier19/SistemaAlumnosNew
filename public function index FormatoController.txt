@@ -1,0 +1,96 @@
+public function index(Request $request)
+{
+    $user = Auth::user();
+    $carreras = Carrera::all();
+    $comentarios = Formato::all();
+    $maestros = Maestro::all();
+    $turnos = Calificacion::all();
+    $salones = Calificacion::all();
+    $semestres = Semestre::all();
+
+    $subjects = Calificacion::join('materias', 'materias.IdMaterias', '=', 'calificacions.Materia_id')
+    ->select('materias.NombreMateria')
+    ->distinct()
+    ->get();
+
+    // Query to retrieve students and their related information
+    $estudiantes = Calificacion::join('users', 'users.id', '=', 'calificacions.Alumno_id')
+        ->join('materias', 'materias.IdMaterias', '=', 'calificacions.Materia_id')
+        ->select('users.name', 'materias.NombreMateria', 'calificacions.U1', 'calificacions.U2', 'calificacions.U3', 'calificacions.U4', 'calificacions.U5', 'calificacions.U6', 'calificacions.U7', 'calificacions.U8', 'calificacions.U9', 'calificacions.U10', 'calificacions.U11', 'calificacions.U12')
+        ->distinct()
+        ->where('Calificacion_Final', '<', 6.9);
+
+    $estudiantes->each(function ($estudiante) {
+        $formato = Formato::where('IdFormatos', $estudiante->Alumno_id)->first();
+        $estudiante->formato = $formato;
+    });
+
+    // Filter by selected semester and optionally by selected career
+    $semestreId = $request->input('Semestre_id');
+    $carreraId = $request->input('carrera_id');
+    // Filter calificaciones by selected units
+    $turnoId = $request -> input('turno');
+    $salonId = $request -> input('salon');
+    $maestroId = $request -> input('maestro');
+
+    if (request()->has('carrera_id')) {
+        $carreraId = request('carrera_id');
+        $estudiantes->where('calificacions.Carrera_id', $carreraId);
+    }
+
+    if ($semestreId) {
+        $estudiantes->whereRaw("calificacions.Semester LIKE '%$semestreId%'");
+    }
+
+    if ($turnoId) {
+        $estudiantes->whereRaw("calificacions.turno LIKE '%$turnoId%'");
+    }
+
+    if ($salonId) {
+        $estudiantes->whereRaw("calificacions.salon LIKE '%$salonId%'");
+    }
+
+    if ($maestroId) {
+        $estudiantes->whereRaw("calificacions.Maestro LIKE '%$maestroId%'");
+    }
+
+    if (auth()->user()->hasRole('Maestro')) {
+        // If the user is a teacher, filter only the students assigned to the teacher
+        $estudiantes->where('calificacions.Maestro', auth()->user()->name);
+    }
+
+    $maestros = Maestro::with('calificaciones')->get();
+    $estudiantes = $estudiantes->paginate(4)->appends($request->all());
+
+    // Obtener la lista de alumnos distintos
+    $alumnos = Calificacion::select('Alumno_id')->distinct()->get();
+
+    // Obtener las calificaciones relacionadas con los alumnos
+    $calificaciones = Calificacion::select('U1', 'U2', 'U3','U4','U5','U6','U7', 'U8', 'U9', 'U10','U11','U12')->distinct()->get();
+
+    if (request()->has('carrera_id')) {
+        $carreraId = request('carrera_id');
+
+
+    } else {
+        $alumnos = collect(); // Crear una colección vacía de alumnos
+        $materias = collect(); // Crear una colección vacía de materias
+        $semestres = collect();
+        $calificaciones = collect();// Crear una colección vacía de calificaciones
+        $maestros = collect();
+        $calificacionesPorUnidad = [];
+    }
+    $calificaciones = Calificacion::with('materias')->get();
+    $calificaciones->each(function ($calificacion) {
+        $alumno = optional(Calificacion::find($calificacion->Alumno_id));
+        $calificacion->alummos = $alumno->Alumno_id ?? null;
+        $calificacion->materias = optional(Materia::find($calificacion->Materia_id))->NombreMateria;
+    });
+
+    
+
+    $formatos = Formato::all();
+
+    // Return the view with the relevant data
+    return view('Formatos.index', compact('carreras', 'alumnos', 'estudiantes', 'subjects','semestres', 'calificaciones', 'maestros', 'turnos', 'salones', 'formatos', 'carreraId', 'maestroId'));
+}

@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
+use Illuminate\Database\Seeder; //importar el model seeders 
 
 //agregamos el modelo de permisos de spatie
 use Spatie\Permission\Models\Permission;
@@ -27,11 +27,16 @@ class SeederTablaPermisos extends Seeder
             'ver-blog',
             'crear-blog',
             'editar-blog',
-            'borrar-blog'
+            'borrar-blog',
+            'Alumno-rol',
+            'Maestro-rol'
+
         ];
 
         foreach($permisos as $permiso) {
             Permission::create(['name'=>$permiso]);
+            // Permission::create(['name'=>'homeAlumno']); //nombre del permiso y el nombre de lo que se le dara permiso
+            // Permission::create(['name'=>'homeAlumno']);
         }
     }
 }

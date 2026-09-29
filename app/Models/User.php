@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-
+ 
 //Agregamos spatie
 use Spatie\Permission\Traits\HasRoles;
 
@@ -45,4 +45,36 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo('\App\Role');
+    }
+
+    public function esAdmin () {
+        if($this->role['name']=='Administrador'){
+          echo 'hola';
+        }
+      }
+
+      public function alumnos()
+    {
+        return $this->hasMany(Alumno::class, 'maestro');
+    }
+
+    public function maestro()
+    {
+        return $this->hasOne(Maestro::class);
+    }
+
+    public function carrera()
+{
+    return $this->hasOne(Carrera::class, 'carrera_id', 'IdCarreras');
+}
+
+public function calificaciones()
+{
+    return $this->hasMany(Calificacion::class, 'Calificacion_Final', 'IdCalificacions');
+}
+      
 }

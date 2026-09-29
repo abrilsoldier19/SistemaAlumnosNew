@@ -1,0 +1,550 @@
+public function index(Request $request)
+{
+    $user = Auth::user();
+    $careers = Carrera::all(); // Retrieve all careers to populate the dropdown
+    $maestros = Maestro::all();
+
+    // Retrieve the selected career's ID from the request
+    $filtroCarrera = $request->input('career');
+
+    // Retrieve the students based on the selected career
+    $formatos = FormatoAnexo19Mensual::when($filtroCarrera, function ($query, $filtroCarrera) {
+        return $query->where('NombreCarrera', $filtroCarrera);
+    })->get();
+    
+
+    if ($user->hasRole('Maestro')) {
+        // Si el usuario es un maestro, muestra solo las calificaciones asignadas a él
+        $formatos = FormatoAnexo19Mensual::where('NombreMaestro', $user->name)
+            ->paginate(10);
+    } elseif ($user->hasRole('Alumno')) {
+        // Si el usuario es un alumno, muestra solo sus propias formatos
+        $formatos = FormatoAnexo19Mensual::where('NombreAlumno', $user->id)
+            ->where('NombreAlumno', $user->id)
+            ->paginate(10);
+    } else {
+        // Si el usuario es un administrador, muestra todas las formatos
+        $formatos = FormatoAnexo19Mensual::paginate(10);
+    }
+
+    return view('FormatoAnexo19Mensual.index', compact('careers', 'formatos', 'filtroCarrera', 'maestros'));
+}
+
+
+
+
+<td colspan="1" align="center" style="background-color: white; font-size: 18px; color: black; border: 2px solid #BABBC2; width: 10px;">
+                                        <div class="dropdown">
+                                        <form action="{{ route('FormatoAnexo19Mensual.index') }}" method="GET">
+                                            <select class="form-control no-print" style="font-size: 16px; width: 210px" name="carrera" id="carrera" onchange="mostrarNombreCarrera(this)">
+                                                <option value="">Seleccione una carrera</option>
+                                                @foreach ($carreras as $carrera)
+                                                    <option value="{{ $carrera->IdCarreras }}" {{ $filtroCarrera == $carrera->IdCarreras ? 'selected' : '' }}>{{ $carrera->NombreCarrera }}</option>
+                                                @endforeach
+                                                <option value="todas">Todas las carreras</option>
+                                            </select>
+                                            <div class="col-md-12 no-print"><button type="submit" class="btn btn-secondary">Filtrar</button>
+                                        </form>
+                                        </div>
+
+                                            <p id="nombreCarreraSeleccionada"></p>
+                                    </td>
+
+                                    <table>
+    <thead>
+        <tr>
+            <th>Alumno ID</th>
+            <!-- Otros encabezados de tabla si los tienes -->
+        </tr>
+    </thead>
+    <tbody id="tablaAlumnos">
+        @foreach($formatos as $formato)
+        <tr>
+            <td style="background-color: white; color: black; height: 50px; width: 12%; border: 2px solid #BABBC2; font-family: Century Gothic, sans-serif; font-size: 16px;">
+                <li style="list-style: none;">{{ $formato->Alumno_id }}</li>
+                <li style="list-style: none;">{{ $formato->alumnos->name }}</li>
+            </td>
+            <!-- Otros datos de cada fila de la tabla si los tienes -->
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
+<script>
+    function mostrarAlumnosDeCarrera() {
+        var selectedCarrera = document.getElementById("carrera").value;
+        var tablaAlumnos = document.getElementById("tablaAlumnos");
+
+        if (selectedCarrera === "") {
+            // No se seleccionó ninguna carrera, muestra todos los alumnos
+            tablaAlumnos.style.display = "table-row-group";
+        } else {
+            // Se seleccionó una carrera, realiza la llamada AJAX para obtener los alumnos
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    var response = JSON.parse(this.responseText);
+                    if (response.success) {
+                        // Limpia la tabla de alumnos
+                        tablaAlumnos.innerHTML = "";
+
+                        // Agrega los nuevos alumnos a la tabla
+                        response.alumnos.forEach(function(alumno) {
+                            var row = document.createElement("tr");
+                            var cell = document.createElement("td");
+                            cell.style.backgroundColor = "white";
+                            cell.style.color = "black";
+                            cell.style.height = "50px";
+                            cell.style.width = "12%";
+                            cell.style.border = "2px solid #BABBC2";
+                            cell.style.fontFamily = "Century Gothic, sans-serif";
+                            cell.style.fontSize = "16px";
+                            cell.innerHTML = "<li style='list-style: none;'>" + alumno.Alumno_id + "</li>";
+                            row.appendChild(cell);
+                            // Agrega otros datos a la fila de la tabla si los tienes
+
+                            tablaAlumnos.appendChild(row);
+                        });
+                    } else {
+                        console.error("Error al obtener los alumnos de la carrera seleccionada.");
+                    }
+                }
+            };
+            xhttp.open("GET", "FormatoAnexo19Mensual.index" + selectedCarrera, true);
+            xhttp.send();
+        }
+    }
+</script>
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Filtro por select - Lista desplegable</title>
+<style>
+.cb {
+  display: none; /* Por defecto */
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<?php
+$db = new PDO('mysql:host=localhost;dbname=sistemaalumnos9', 'root', '');
+
+// Fetch all teachers
+$sqlTeachers = $db->prepare("SELECT * FROM formatoanexomensual19 ORDER BY NombreMaestro ASC");
+$sqlTeachers->execute();
+$maestros = $sqlTeachers->fetchAll();
+
+// Fetch all students
+$sqlStudents = $db->prepare("SELECT * FROM users ORDER BY name ASC");
+$sqlStudents->execute();
+$alumnos = $sqlStudents->fetchAll();
+?>
+
+<select class="form-control" style="height: 30px; width: 96%; padding: .175rem .25rem" name="categ" id="filtros3">
+  <option value="">Seleccione maestro...</option>
+  <?php foreach ($maestros as $maestro): ?>
+    <option value="<?php echo $maestro['Alumno_id']; ?>"><?php echo $maestro['NombreMaestro']; ?></option>
+  <?php endforeach; ?>
+</select>
+
+<?php if (count($alumnos) > 0): ?>
+  <ul class="list-unstyled">
+    <?php foreach ($alumnos as $alumno): ?>
+      <li class="cb color_<?php echo $alumno['id']; ?>" id="cat<?php echo $alumno['name']; ?>">
+        <?php echo $alumno['name']; ?>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+<?php else: ?>
+  <p class="alert alert-danger">No hay resultados</p>
+<?php endif; ?>
+
+<script type="text/javascript">
+$(function() {
+  $('#filtros3').on('change', function() {
+    var value = $(this).val();
+    if (value == "") {
+      $('.cb').show();
+    } else {
+      // Ocultamos todos los contenedores de colores
+      $('.cb').hide();
+      // Mostramos el alumno asociado al maestro seleccionado
+      $('.color_' + value).show();
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+
+public function index(Request $request)
+{
+    $user = Auth::user();
+    $formatos = FormatoAnexo19Mensual::select(
+            'users.id AS id_alumno',
+            'users.name AS nombre_alumno',
+            'materias.NombreMateria AS nombre_materia',
+            'carreras.NombreCarrera AS nombre_carrera',
+            'Semestre',
+            'NombreMaestro',
+            'formatoanexomensual19.NombreCarrera',
+            'turno',
+            'salon',
+            'formatoanexomensual19.NombreMateria',
+            'formatoanexomensual19.Alumno_id'
+        )
+        ->join('users', 'formatoanexomensual19.NombreAlumno', '=', 'users.id')
+        ->join('materias', 'formatoanexomensual19.NombreMateria', '=', 'materias.IdMaterias')
+        ->join('carreras', 'formatoanexomensual19.NombreCarrera', '=', 'carreras.IdCarreras');
+
+    $filtroCarrera = $request->input('carrera');
+    $filtroMaestro = $request->input('Maestro_id');
+
+    // Filtro de carrera
+    if ($filtroCarrera) {
+        $formatos->where('carreras.IdCarreras', $filtroCarrera);
+    }
+
+    // Filtro de maestro
+    if ($filtroMaestro) {
+        $formatos->where('formatoanexomensual19.NombreMaestro', $filtroMaestro);
+    }
+
+    // Filtrar solo los alumnos asignados al maestro actual (if user is a teacher)
+    if ($user->hasRole('Maestro')) {
+        $formatos->where('formatoanexomensual19.NombreMaestro', $user->name);
+    }
+
+    // Filtrar registros por rol de usuario (if user is an admin, show all maestros)
+    if ($user->hasRole('Admin')) {
+        $maestros = Maestro::all();
+    } else {
+        $maestros = Maestro::where('NombreMaestro', $user->name)->get();
+    }
+
+    // Apply additional filters if needed
+    // ...
+
+    $formatos = $formatos->paginate(10);
+    $materias = Materia::all();
+    $carreras = Carrera::all();
+    $fechaActual = now();
+
+    return view('FormatoAnexo19Mensual.index', compact('formatos', 'materias', 'carreras', 'maestros', 'fechaActual', 'filtroCarrera', 'filtroMaestro', 'user'));
+}
+
+
+
+public function index(Request $request)
+{
+    $user = Auth::user();
+    $formatos = FormatoAnexo19Mensual::query();
+    $filtroCarrera = $request->input('carrera');
+    $maestroId = $request->input('Maestro_id');
+
+    // Use aliases for the table names in the JOIN clause
+    $formatos->join('carreras', 'formatoanexomensual19.NombreCarrera', '=', 'carreras.IdCarreras');
+    
+
+    //filtro de carrera
+    if ($filtroCarrera) {
+        $formatos->where('carreras.IdCarreras', $filtroCarrera);
+    }
+
+    //filtro maestro
+    if ($maestroId) {
+        $formatos->where('NombreMaestro', $maestroId);
+    }
+
+    if ($user->hasRole('Maestro')) {
+        // If the user is a teacher, show only the records assigned to them
+        $formatos->where('NombreMaestro', $user->name);
+    } 
+
+    if ($user->hasRole('Admin')) {
+        $maestros = Maestro::all();
+    } else {
+        $maestros = Maestro::where('NombreMaestro', $user->name)->get();
+    }
+
+    if ($filtroCarrera !== null) {
+        if ($filtroCarrera === 'todas') {
+            // Do nothing as we want all the records for all the carreras
+        } elseif (is_array($filtroCarrera)) {
+            $formatos->whereIn('carreras.NombreCarrera', $filtroCarrera); // Use the alias in WHERE clause
+        } else {
+            $formatos->where('carreras.NombreCarrera', $filtroCarrera); // Use the alias in WHERE clause
+        }
+    }
+
+    $formatos = $formatos->paginate(10);
+    $materias = Materia::all();
+    $carreras = Carrera::all();
+    $maestros = Maestro::all();
+    $fechaActual = now();
+
+    return view('FormatoAnexo19Mensual.index', compact('formatos', 'materias', 'carreras', 'maestros', 'fechaActual', 'filtroCarrera', 'maestroId', 'user'));
+}
+
+
+protected function create(array $data)
+    {
+        $roles = Role::pluck('name','name')->all();
+        return view('usuarios.crear',compact('roles'));
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|same:confirm-password',
+            'roles' => 'required'
+        ]);
+    
+        $input = $request->all();
+        $input['password'] = Hash::make($input['password']);
+    
+        $user = User::create($input);
+        $user->assignRole($request->input('roles'));
+    
+        return
+
+
+    protected function create(array $data)
+    {
+        $roles = Role::pluck('name','name')->all();
+        return view('auth.register',compact('roles'));
+    }
+
+<button onclick="window.location='{{ route('Calificaciones.index') }}'" class="card order-card" style="background-color: #0389cd; ">
+
+
+
+////////////////////////////////////////////////
+
+                                    <option value="Aguilar Covarrubias Norma Aracely">Aguilar Covarrubias Norma Aracely</option>
+                                    <option value="Aguilera Mancilla Héctor">Aguilera Mancilla Héctor</option>
+                                    <option value="Aldape Suárez Miguel">Aldape Suárez Miguel</option>
+                                    <option value="Aranda Alarcón Graciela">Aranda Alarcón Graciela</option>
+                                    <option value="Asís Cipriano Karime">Asís Cipriano Karime</option>
+                                    <option value="Baltierra Costeira Gabriela">Baltierra Costeira Gabriela</option>
+                                    <option value="Botello Reyes Mario Alan">Botello Reyes Mario Alan</option>
+                                    <option value="Coronado Ríos Reyes">Coronado Ríos Reyes</option>
+                                    <option value="Cortes Guerrero David">Cortes Guerrero David</option>
+                                    <option value="Cortez Del Valle Homero">Cortez Del Valle Homero</option>
+                                    <option value="De Hoyos Valdés Jaime">De Hoyos Valdés Jaime</option>
+                                    <option value="De Los Santos Flores Hugo Alberto">De Los Santos Flores Hugo Alberto</option>
+                                    <option value="Díaz Blanco Deniss Itzhel">Díaz Blanco Deniss Itzhel</option>
+                                    <option value="Díaz Menchaca José Raúl">Díaz Menchaca José Raúl</option>
+                                    <option value="Duarte Sánchez Ricardo Fidel">Duarte Sánchez Ricardo Fidel</option>
+                                    <option value="Escoto Sánchez Héctor Javier">Escoto Sánchez Héctor Javier</option>
+                                    <option value="Flores Flores Irasema">Flores Flores Irasema</option>
+                                    <option value="Flores Peña Enrique">Flores Peña Enrique</option>
+                                    <option value="Franco Cuellar Mónica Patricia">Franco Cuellar Mónica Patricia</option>
+                                    <option value="Fuentes Puente Edna Marcela">Fuentes Puente Edna Marcela</option>
+                                    <option value="Garcia Vazquez Victor Alfonso">Garcia Vazquez Victor Alfonso</option>
+                                    <option value="Garcia Plata Maria Antonieta">Garcia Plata Maria Antonieta</option>
+                                    <option value="González Escobedo Carmina">González Escobedo Carmina</option>
+                                    <option value="González Puente Isaac">González Puente Isaac</option>
+                                    <option value="González Puente Zaida Aydeé">González Puente Zaida Aydeé</option>
+                                    <option value="Gonzalez Rodriguez Laura Elena">Gonzalez Rodriguez Laura Elena</option>
+                                    <option value="González Treviño Gibran Jalil">González Treviño Gibran Jalil</option>
+                                    <option value="González Zamarripa Gregorio">González Zamarripa Gregorio</option>
+                                    <option value="Hernández Córdova Adriana">Hernández Córdova Adriana</option>
+                                    <option value="Hernandez Rodriguez Héctor">Hernandez Rodriguez Héctor</option>
+                                    <option value="Hernändez Treviño José Mario">Hernändez Treviño José Mario</option>
+                                    <option value="Herrera Valdez Ernesto">Herrera Valdez Ernesto</option>
+                                    <option value="Jasso Ibarra Sandra Lilia">Jasso Ibarra Sandra Lilia</option>
+                                    <option value="Jiménez Zavala Felipe">Jiménez Zavala Felipe</option>
+                                    <option value="Jordán Marmolejo Luís Gerardo">Jordán Marmolejo Luís Gerardo</option>
+                                    <option value="López Cepeda Jonathan">López Cepeda Jonathan</option>
+                                    <option value="Martínez Flores Rocío">Martínez Flores Rocío</option>
+                                    <option value="Martínez García Ruth Margarita">Martínez García Ruth Margarita</option>
+                                    <option value="Martínez Narvaez Jorge Alberto">Martínez Narvaez Jorge Alberto</option>
+                                    <option value="Martinez Campos Javier">Martinez Campos Javier</option>
+                                    <option value="Martínez Vela Verónica">Martínez Vela Verónica</option>
+                                    <option value="Medina Guzmán Laura">Medina Guzmán Laura</option>
+                                    <option value="Meléndez López Edith Margot">Meléndez López Edith Margot</option>
+                                    <option value="Morales Medina José Luís">Morales Medina José Luís</option>
+                                    <option value="Mota Real Lorena">Mota Real Lorena</option>
+                                    <option value="Moreno Rodriguez Jairo Cristopher Hassan">Moreno Rodriguez Jairo Cristopher Hassan</option>
+                                    <option value="Narváez García Francisco Javier">Narváez García Francisco Javier</option>
+                                    <option value="Olvera Pecina Ismael">Olvera Pecina Ismael</option>
+                                    <option value="Ortiz Valdez Andres Eduardo">Ortiz Valdez Andres Eduardo</option>
+                                    <option value="Picazo Rodríguez Nallely Guadalupe">Picazo Rodríguez Nallely Guadalupe</option>
+                                    <option value="Ramos Arellano Juan de Dios">Ramos Arellano Juan de Dios</option>
+                                    <option value="Razo Vazquez Axel Sebastian">Razo Vazquez Axel Sebastian</option>
+                                    <option value="Renteria Avilez Martha Elena">Renteria Avilez Martha Elena</option>
+                                    <option value="Riojas Rodríguez Guillermo">Riojas Rodríguez Guillermo</option>
+                                    <option value="Riojas Rodríguez Rubén Miguel">Riojas Rodríguez Rubén Miguel</option>
+                                    <option value="Rivas Aguilar Antonio">Rivas Aguilar Antonio</option>
+                                    <option value="Rodríguez Campos Alejandro">Rodríguez Campos Alejandro</option>
+                                    <option value="Rodríguez Campos Claudia">Rodríguez Campos Claudia</option>
+                                    <option value="Romero Peña Jesús Manuel">Romero Peña Jesús Manuel</option>
+                                    <option value="Salas Torres Luis Horacio">Salas Torres Luis Horacio</option>
+                                    <option value="Sánchez Esquivel César">Sánchez Esquivel César</option>
+                                    <option value="Sánchez Hernández Raúl de Jesús">Sánchez Hernández Raúl de Jesús</option>
+                                    <option value="Sánchez Montemayor Jesús">Sánchez Montemayor Jesús</option>
+                                    <option value="Sánchez Uribe Jesus Adolfo">Sánchez Uribe Jesus Adolfo</option>
+                                    <option value="Valadez Zamarron Mayela del Carmen">Valadez Zamarron Mayela del Carmen</option>
+                                    <option value="Zertuche Zuñiga Homero">Zertuche Zuñiga Homero</option>
+
+parque industrial
+mano derecha comedor
+caseta 1 
+10 am
+carla sanchez
+
+@Rosenrot18
+
+<?php
+include 'db.php';
+ 
+$get_id=$_REQUEST['student_id'];
+ 
+$fname= $_POST['fname'];
+$mname= $_POST['mname'];
+$lname= $_POST['lname'];
+$address= $_POST['address'];
+$email= $_POST['email'];
+ 
+$sql = "UPDATE student SET fname ='$fname', mname ='$mname', lname ='$lname', 
+address ='$address', email ='$email' WHERE student_id = '$get_id' ";
+ 
+$conn->exec($sql);
+echo "<script>alert('Successfully Edit The Account!'); window.location='index.php'</script>";
+?>
+
+
+
+<?php
+$con = mysqli_connect('localhost', 'root', '', 'mecanismos');
+$id =$_GET['updateid'];
+$sql= "select * from 'usuarios' where id=$id";
+$result=mysqli_query($con, $sql);
+$row=mysqli_fetch_assoc($result);
+$txtNombre=$row['txtNombre'];
+$txtGrupo=$row['txtGrupo'];
+$txtCarrera=$row['txtCarrera'];
+$txtFecha=$row['txtFecha'];
+
+if(isset($_POST['submit']))
+{
+    $txtNombre= $_POST['txtNombre'];
+    $txtGrupo= $_POST['txtGrupo'];
+    $txtCarrera = $_POST['txtCarrera'];
+    $txtFecha = $_POST['txtFecha'];
+
+    $sql = "UPDATE 'usuarios' set id=$id, nombre='$txtNombre', grupo='$txtGrupo',
+    carreras='$txtCarrera', fecha='$txtFecha' where id=$id";
+    $result=mysqli_query($con,$sql);
+    if($result)
+    {
+        echo "updated succesfully";
+        header('location:datos.php');
+    }else{
+        die(mysqli_error($con));
+    }
+}
+?>
+
+844 405 2298
+clinica
+
+
+
+<form id="selectMaestroForm" action="{{ route('FormatoAnexo19.index') }}" method="GET">
+                                    <select class="form-control no-print" style="font-size: 16px; width: 280px;" name="Maestro_id" onchange="mostrarNombreMaestro(this)"> Seleccione un maestro
+                                      <option value="">Todos los maestros</option>
+                                      @foreach ($maestros as $maestro)
+                                            <option value="{{ $maestro->NombreMaestro }}">{{ $maestro->NombreMaestro }}</option>
+                                    @endforeach
+                                      
+                                      <option value="Aguilar Covarrubias Norma Aracely">Aguilar Covarrubias Norma Aracely</option>
+                                      <option value="Aguilera Mancilla Héctor">Aguilera Mancilla Héctor</option>
+                                      <option value="Aldape Suárez Miguel">Aldape Suárez Miguel</option>
+                                      <option value="Aranda Alarcón Graciela">Aranda Alarcón Graciela</option>
+                                      <option value="Asís Cipriano Karime">Asís Cipriano Karime</option>
+                                      <option value="Baltierra Costeira Gabriela">Baltierra Costeira Gabriela</option>
+                                      <option value="Botello Reyes Mario Alan">Botello Reyes Mario Alan</option>
+                                      <option value="Coronado Ríos Reyes">Coronado Ríos Reyes</option>
+                                      <option value="Cortes Guerrero David">Cortes Guerrero David</option>
+                                      <option value="Cortez Del Valle Homero">Cortez Del Valle Homero</option>
+                                      <option value="De Hoyos Valdés Jaime">De Hoyos Valdés Jaime</option>
+                                      <option value="De Los Santos Flores Hugo Alberto">De Los Santos Flores Hugo Alberto</option>
+                                      <option value="Díaz Blanco Deniss Itzhel">Díaz Blanco Deniss Itzhel</option>
+                                      <option value="Díaz Menchaca José Raúl">Díaz Menchaca José Raúl</option>
+                                      <option value="Duarte Sánchez Ricardo Fidel">Duarte Sánchez Ricardo Fidel</option>
+                                      <option value="Escoto Sánchez Héctor Javier">Escoto Sánchez Héctor Javier</option>
+                                      <option value="Flores Flores Irasema">Flores Flores Irasema</option>
+                                      <option value="Flores Peña Enrique">Flores Peña Enrique</option>
+                                      <option value="Franco Cuellar Mónica Patricia">Franco Cuellar Mónica Patricia</option>
+                                      <option value="Fuentes Puente Edna Marcela">Fuentes Puente Edna Marcela</option>
+                                      <option value="Garcia Vazquez Victor Alfonso">Garcia Vazquez Victor Alfonso</option>
+                                      <option value="Garcia Plata Maria Antonieta">Garcia Plata Maria Antonieta</option>
+                                      <option value="González Escobedo Carmina">González Escobedo Carmina</option>
+                                      <option value="González Puente Isaac">González Puente Isaac</option>
+                                      <option value="González Puente Zaida Aydeé">González Puente Zaida Aydeé</option>
+                                      <option value="Gonzalez Rodriguez Laura Elena">Gonzalez Rodriguez Laura Elena</option>
+                                      <option value="González Treviño Gibran Jalil">González Treviño Gibran Jalil</option>
+                                      <option value="González Zamarripa Gregorio">González Zamarripa Gregorio</option>
+                                      <option value="Hernández Córdova Adriana">Hernández Córdova Adriana</option>
+                                      <option value="Hernandez Rodriguez Héctor">Hernandez Rodriguez Héctor</option>
+                                      <option value="Hernändez Treviño José Mario">Hernändez Treviño José Mario</option>
+                                      <option value="Herrera Valdez Ernesto">Herrera Valdez Ernesto</option>
+                                      <option value="Jasso Ibarra Sandra Lilia">Jasso Ibarra Sandra Lilia</option>
+                                      <option value="Jiménez Zavala Felipe">Jiménez Zavala Felipe</option>
+                                      <option value="Jordán Marmolejo Luís Gerardo">Jordán Marmolejo Luís Gerardo</option>
+                                      <option value="López Cepeda Jonathan">López Cepeda Jonathan</option>
+                                      <option value="Martínez Flores Rocío">Martínez Flores Rocío</option>
+                                      <option value="Martínez García Ruth Margarita">Martínez García Ruth Margarita</option>
+                                      <option value="Martínez Narvaez Jorge Alberto">Martínez Narvaez Jorge Alberto</option>
+                                      <option value="Martinez Campos Javier">Martinez Campos Javier</option>
+                                      <option value="Martínez Vela Verónica">Martínez Vela Verónica</option>
+                                      <option value="Medina Guzmán Laura">Medina Guzmán Laura</option>
+                                      <option value="Meléndez López Edith Margot">Meléndez López Edith Margot</option>
+                                      <option value="Morales Medina José Luís">Morales Medina José Luís</option>
+                                      <option value="Mota Real Lorena">Mota Real Lorena</option>
+                                      <option value="Moreno Rodriguez Jairo Cristopher Hassan">Moreno Rodriguez Jairo Cristopher Hassan</option>
+                                      <option value="Narváez García Francisco Javier">Narváez García Francisco Javier</option>
+                                      <option value="Olvera Pecina Ismael">Olvera Pecina Ismael</option>
+                                      <option value="Ortiz Valdez Andres Eduardo">Ortiz Valdez Andres Eduardo</option>
+                                      <option value="Picazo Rodríguez Nallely Guadalupe">Picazo Rodríguez Nallely Guadalupe</option>
+                                      <option value="Ramos Arellano Juan de Dios">Ramos Arellano Juan de Dios</option>
+                                      <option value="Razo Vazquez Axel Sebastian">Razo Vazquez Axel Sebastian</option>
+                                      <option value="Renteria Avilez Martha Elena">Renteria Avilez Martha Elena</option>
+                                      <option value="Riojas Rodríguez Guillermo">Riojas Rodríguez Guillermo</option>
+                                      <option value="Riojas Rodríguez Rubén Miguel">Riojas Rodríguez Rubén Miguel</option>
+                                      <option value="Rivas Aguilar Antonio">Rivas Aguilar Antonio</option>
+                                      <option value="Rodríguez Campos Alejandro">Rodríguez Campos Alejandro</option>
+                                      <option value="Rodríguez Campos Claudia">Rodríguez Campos Claudia</option>
+                                      <option value="Romero Peña Jesús Manuel">Romero Peña Jesús Manuel</option>
+                                      <option value="Salas Torres Luis Horacio">Salas Torres Luis Horacio</option>
+                                      <option value="Sánchez Esquivel César">Sánchez Esquivel César</option>
+                                      <option value="Sánchez Hernández Raúl de Jesús">Sánchez Hernández Raúl de Jesús</option>
+                                      <option value="Sánchez Montemayor Jesús">Sánchez Montemayor Jesús</option>
+                                      <option value="Sánchez Uribe Jesus Adolfo">Sánchez Uribe Jesus Adolfo</option>
+                                      <option value="Valadez Zamarron Mayela del Carmen">Valadez Zamarron Mayela del Carmen</option>
+                                      <option value="Zertuche Zuñiga Homero">Zertuche Zuñiga Homero</option>
+                                        
+                                    </select>
+                                    <div class="col-md-12 no-print">
+                                        <button type="submit" class="btn btn-secondary">Filtrar</button>
+                                    </div>
+                                </form>

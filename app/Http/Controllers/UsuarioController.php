@@ -20,17 +20,28 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {      
-        //Sin paginación
-        /* $usuarios = User::all();
-        return view('usuarios.index',compact('usuarios')); */
+{
+    $usuarios_nombre = User::select('name')
+        ->distinct()
+        ->orderBy('name')
+        ->get();
 
-        //Con paginación
-        $usuarios = User::paginate(5);
-        return view('usuarios.index',compact('usuarios'));
+    $usuariosQuery = User::query();
 
-        //al usar esta paginacion, recordar poner en el el index.blade.php este codigo  {!! $usuarios->links() !!}
+    $filtroUsuario = $request->input('name');
+
+    if ($filtroUsuario) {
+        $usuariosQuery->where('name', $filtroUsuario);
     }
+
+    $usuarios = $usuariosQuery->paginate(5);
+
+    return view('usuarios.index', compact(
+        'usuarios',
+        'usuarios_nombre',
+        'filtroUsuario'
+    ));
+}
 
     /**
      * Show the form for creating a new resource.
@@ -74,10 +85,7 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -125,6 +133,42 @@ class UsuarioController extends Controller
         $user->assignRole($request->input('roles'));
     
         return redirect()->route('usuarios.index');
+    }
+
+    public function editarPassword($id)
+    {
+        $user = User::find($id);
+        $roles = Role::pluck('name','name')->all();
+        $userRole = $user->roles->pluck('name','name')->all();
+    
+        return view('usuarios.cambiarPassword',compact('user','roles','userRole'));
+    }
+    
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function actualizarPassword(Request $request, $id)
+    {
+        $this->validate($request, [
+            'password' => 'same:confirm-password',
+        ]);
+    
+        $input = $request->all();
+        if(!empty($input['password'])){ 
+            $input['password'] = Hash::make($input['password']);
+        }else{
+            $input = Arr::except($input,array('password'));    
+        }
+    
+        $user = User::find($id);
+        $user->update($input);
+    
+        return redirect()->route('home.index');
     }
 
     /**

@@ -1,3 +1,3 @@
 <div class="footer-left">
-    All rights reserved &copy; {{ date('Y') }}
+     Creado Por Jesus Carmona &copy; {{ date('Y') }}  Tec Monclova. Todos los derechos reservados <!--All rights reserved -->
 </div>

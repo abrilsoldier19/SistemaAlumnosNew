@@ -13,12 +13,44 @@ use Illuminate\Support\Facades\DB;
 class RolController extends Controller
 {
     function __construct()
-    {
-         $this->middleware('permission:ver-rol|crear-rol|editar-rol|borrar-rol', ['only' => ['index']]);
-         $this->middleware('permission:crear-rol', ['only' => ['create','store']]);
-         $this->middleware('permission:editar-rol', ['only' => ['edit','update']]);
-         $this->middleware('permission:borrar-rol', ['only' => ['destroy']]);
-    }
+    {   //Agregamos los permisos que hemos definido 
+        $this->middleware('permission:ver-rol|crear-rol|editar-rol|borrar-rol|Alumno-rol|Maestro-rol"', ['only' => ['index']]);
+        $this->middleware('permission:crear-rol', ['only' => ['create','store']]);
+        $this->middleware('permission:editar-rol', ['only' => ['edit','update']]);
+        $this->middleware('permission:borrar-rol', ['only' => ['destroy']]);
+
+        // Permiso para que el alumno pueda agregar, editar y borrar sus propias calificaciones
+        $this->middleware('permission:ver-calificaciones', ['only' => ['index']]);
+        $this->middleware('permission:agregar-calificacion', ['only' => ['create','store']]);
+        $this->middleware('permission:editar-calificacion', ['only' => ['edit','update']]);
+        $this->middleware('permission:borrar-calificacion', ['only' => ['destroy']]);
+
+        // Permiso para que el alumno pueda agregar, editar y borrar sus propias calificaciones
+        $this->middleware('permission:ver-materias|ver-maestros|ver-calificaciones', ['only' => ['index']]);
+
+        //$this->middleware('permission:gestionar-propia-calificacion', ['only' => ['index', 'create','store', 'edit','update', 'destroy']]);
+
+    
+
+        // Asignar permisos específicos al rol de alumno
+        $alumno = Role::where('name', 'Alumno')->first();
+        $alumno->syncPermissions(['ver-calificaciones', 'editar-calificacion', 'borrar-calificacion','agregar-calificacion','crear-rol', 'editar-rol','borrar-rol', 'Alumno-rol']);
+
+        $alumnoRole = Role::findByName('Alumno');
+        $maestroRole = Role::findByName('Maestro');
+        $administradorRole = Role::findByName('Administrador');
+        
+        
+        $verCalificaciones = Permission::find('ver-calificaciones');
+        $agregarCalificacion = Permission::find('agregar-calificacion');
+        $editarCalificacion = Permission::find('editar-calificacion');
+        $borrarCalificacion = Permission::find('borrar-calificacion');
+        $alumnoRole->givePermissionTo( $verCalificaciones, $editarCalificacion, $agregarCalificacion, $borrarCalificacion);
+        $maestroRole->givePermissionTo( $verCalificaciones, $editarCalificacion, $agregarCalificacion, $borrarCalificacion);
+        $administradorRole->givePermissionTo( $verCalificaciones, $editarCalificacion, $agregarCalificacion, $borrarCalificacion);
+
+ 
+   }
     /**
      * Display a listing of the resource.
      *
@@ -40,7 +72,7 @@ class RolController extends Controller
     public function create()
     {
         $permission = Permission::get();
-        return view('roles.crear',compact('permission'));
+        return view('roles.crear',compact('permission')); 
     }
 
     /**
@@ -68,10 +100,7 @@ class RolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

@@ -3,10 +3,12 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Edit Profile</h5>
+                <h5 class="modal-title">Editar Perfil</h5>
                 <button type="button" aria-label="Close" class="close outline-none" data-dismiss="modal">×</button>
             </div>
-            <form method="POST" id="editProfileForm" enctype="multipart/form-data">
+            <form method="POST"action="{{ route('usuarios.actualizarPassword', ['usuario' => Auth::id()]) }}">
+            @csrf
+            @method('PUT')
                 <div class="modal-body">
                     <div class="alert alert-danger d-none" id="editProfileValidationErrorsBox"></div>
                     <input type="hidden" name="user_id" id="pfUserId">
@@ -14,22 +16,17 @@
                     {{csrf_field()}}
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            <label>Name:</label><span class="required">*</span>
+                            <label>Nombre:</label><span class="required">*</span>
                             <input type="text" name="name" id="pfName" class="form-control" required autofocus tabindex="1">
                         </div>
                         <div class="form-group col-sm-6 d-flex">
                             <div class="col-sm-4 col-md-6 pl-0 form-group">
-                                <label>Profile Image:</label>
+                                <label>Imagen de perfil:</label>
                                 <br>
-                                <label
-                                        class="image__file-upload btn btn-primary text-white"
-                                        tabindex="2"> Choose
-                                    <input type="file" name="photo" id="pfImage" class="d-none" >
-                                </label>
                             </div>
-                            <div class="col-sm-3 preview-image-video-container float-right mt-1">
+                            <div class="col-sm-5 preview-image-video-container float-right mt-1">
                                 <img id='edit_preview_photo' class="img-thumbnail user-img user-profile-img profilePicture"
-                                     src="{{asset('img/logo.png')}}"/>
+                                src="{{asset('img/logo.png')}}"   style="width: 400px; height: auto;"/>
                             </div>
                         </div>
                     </div>

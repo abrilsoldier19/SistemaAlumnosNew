@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::HOME; //El atributo $redirectTo permite definir una ruta, para que todo usuario sea redirigido allí luego de iniciar sesión.
 
     /**
      * Create a new controller instance.

@@ -1,0 +1,1260 @@
+----------sistemas---------------------
+
+Semestre 1
+Cálculo Diferencial
+Fundamentos De Programación
+Taller De Ética
+Matemáticas Discretas
+Taller De Administración
+Fundamentos De Investigación
+Semestre 2
+Cálculo Integral
+Programación Orientada A Objetos
+Contabilidad Financiera
+Química
+Álgebra Lineal
+Física General
+Semestre 3
+Cálculo Vectorial
+Estructura De Datos
+Fundamentos De Base De Datos
+Graficación
+Probabilidad Y Estadística
+Principios Eléctricos Y Aplicaciones Digitales
+Semestre 4
+Ecuaciones Diferenciales
+Fundamentos De Telecomunicaciones
+Tópicos Avanzados De Programación
+Taller De Base De Datos
+Investigación De Operaciones
+Sistemas Operativos
+Arquitectura De Computadoras
+Semestre 5
+Métodos Numéricos
+Redes De Computadoras
+Administración De Base De Datos
+Taller De Sistemas Operativos
+Fundamentos De Ingeniería De Software
+Lenguajes De Interfaz
+Semestre 6
+Lenguajes Y Autómatas I
+Conmutación Y Enrutamiento De Redes De Datos
+Programación Web
+Ingeniería De Software
+Sistemas Programables
+Programación Lógica Y Funcional
+Programación De Dispositivos Móviles
+Habilidades Devops
+Semestre 7
+Lenguajes Y Autómatas II
+Administración De Redes
+Inteligencia Artificial
+Taller De Investigación I
+Gestión De Proyectos De Software
+Big Data Análisis De Datos
+Internet De Las Cosas
+Integración Y Despliegue Continuos
+Desarrollo Seguro
+Semestre 8
+COMUNICACION Y LIDERAZGO EN TECNOLOGIAS DE INFORMACION
+Desarrollo De Aplicaciones Web
+Programación En Ambientes Distribuidos
+Ciberseguridad
+Cultura Empresarial
+Taller De Investigación II
+Simulación
+Computo En La Nube
+Ciencia De Datos
+
+
+
+-------mecatronica--------------
+
+Semestre 1
+Química
+Cálculo Diferencial
+Taller De Ética
+Dibujo Asistido Por Computadora
+Metrología Y Normalización
+Fundamentos De Investigación
+Semestre 2
+Cálculo Integral
+Álgebra Lineal
+Ciencia E Ingeniería De Materiales
+Programación Básica
+Estadística Y Control De Calidad
+Administración Y Contabilidad
+Semestre 3
+Cálculo Vectorial
+Procesos De Fabricación
+Arnoldo Solis Covarrubias
+Electromagnetismo
+Benjamin Arellano Orozco
+Christian Aldaco Gonzalez
+Estática
+Jorge Oyervides Valdez
+Métodos Numéricos
+Semestre 4
+Ecuaciones Diferenciales
+Fundamentos De Termodinámica
+Rene Allende Mata
+Navarro Leal Rocio
+Elias Servin Hernandez
+Cisneros Morales Massiel Cristina
+Mecánica De Materiales
+Aguillon Malacara Alejandra Daniela
+Juan Carlos Cardenas Contreras
+Juan Francisco Tovar Epifanio
+Dinámica
+Cipriano Alvarado Gonzalez
+Claudia Yvonne Franco Martinez
+Arredondo Valdez Juan
+De La Pena Alcala Ismene Guadalupe
+Análisis De Circuitos Eléctricos
+Fernando Aguilar Gaona
+Alejandro Martinez Hernandez
+Horacio Tolentino Quilantan
+Ivan De Jesus Epifanio Lopez
+Taller De Investigación I
+Fernando Alfonso Ruiz Moreno
+Luis Manuel Navarro Huitron
+Semestre 5
+Máquinas Eléctricas
+Allende Sancho Gabriel
+Daniel Ruiz Calderon
+Jose Angel Ruiz Aguilar
+Obed Ramirez Gomez
+Electrónica Analógica
+Flavio Rodriguez Vargas
+Rolando Rodriguez Pimentel
+Fernando Aguilar Gaona
+Joaquin Antonio Alvarado Bustos
+Mecanismos
+Julian Javier Hernandez De La Rosa
+Arredondo Valdez Juan
+Cipriano Alvarado Gonzalez
+Arturo Gerardo Guerrero Martinez
+Análisis De Fluidos
+Ignacio Javier Gonzalez Ordaz
+Edgar Benito Martinez Mercado
+Taller De Investigación II
+Velarde Sanchez Ada Karina
+MALDONADO HERNANDEZ JUAN DE DIOS GERARDO
+Zavala Torres Ma. Elida
+Programación Avanzada
+Yolanda Mexicano Reyes
+Federico Emmanuel Rivera Torres
+Semestre 6
+Electrónica De Potencia Aplicada
+Ivan De Jesus Epifanio Lopez
+Ruiz Carranza Leonardo Daniel
+Alejandro Martinez Hernandez
+Instrumentación
+Cecilia Mendoza Rivas
+Gonzalez Roblero Neider
+Francisco Agustin Vazquez Esquivel
+Diseño De Elementos Mecánicos
+Adame Oviedo Lourdes Guadalupe
+Nestor Saavedra Camacho
+Juan Antonio Guerrero Hernandez
+Electrónica Digital
+Ruiz Carranza Leonardo Daniel
+Flores Sanmiguel Francisco
+Fritsche Ramirez Ewald
+Vibraciones Mecánicas
+Flores Campos Ruben
+Luis Uriel Garcia Bustos
+Reyna Valdes Erendira Guadalupe
+Anaya Zavaleta Juan Carlos
+Administración Del Mantenimiento
+Juan Manuel Saucedo Alonso
+Ivan De Jesus Contreras Silva
+AVENDANO MALACARA CESAR HUMBERTO
+Orquidea Esmeralda Velarde Sanchez
+Semestre 7
+Dinámica De Sistemas
+Gerardo Jarquin Hernandez
+FERNANDEZ RAMIREZ KARLA IVONNE
+Ruiz Ramos Isaac
+Flavio Rodriguez Vargas
+Jaime Enrique Perez Terrazas
+Manufactura Avanzada
+GOMEZ MUNOZ ANA GABRIELA
+Maria Del Socorro Marines Leal
+Miguel Alberto Marquez Armendariz
+Circuitos Hidráulicos Y Neumáticos
+Luis Rey Santos Saucedo
+Cecilia Mendoza Rivas
+Manuel Enrique Sandoval Lopez
+Francisco Agustin Vazquez Esquivel
+Ivan De Jesus Contreras Silva
+Mantenimiento
+Jose Maria Resendiz Vielma
+RAMOS GARCIA FRANCISCO JESUS
+Luis Gerardo Sanchez Chavez
+Microcontroladores
+Jozef Jesus Reyes Reyna
+Pedro Quintanilla Contreras
+SALDANA MORA HUITZILIHUITL
+Diseño Asistido Por Computadora
+Ana Laura Saucedo Jimenez
+Jose Santos Avendano Mendez
+Juan Alejandro Santana Aldape
+Luis Uriel Garcia Bustos
+Semestre 8
+Control
+Jesus Guerrero Contreras
+Ricardo Martinez Alvarado
+Cesar Gerardo Martinez Sanchez
+Formulación Y Evaluación De Proyectos
+Garcia Her Perla Magdalena
+Nadia Patricia Ramirez Santillan
+Gonzalez Delgado Jose Ignacio
+Eva Flores Rocha
+Leza Sanchez Yuvizela
+Controladores Lógicos Programables
+Manuel Enrique Sandoval Lopez
+Toribio Alfaro Garcia
+Mario Alberto Ponce Llamas
+Sistemas Avanzados De Manufactura
+Maria Del Socorro Marines Leal
+Navarro Gonzalez Jose Luis
+Velarde Sanchez Ada Karina
+Redes Industriales
+Flores Sanmiguel Francisco
+Gonzalez Roblero Neider
+Semestre 9
+Robótica
+FERNANDEZ RAMIREZ KARLA IVONNE
+Ruiz Ramos Isaac
+Gerardo Jarquin Hernandez
+TOPICOS SELECTOS DE LA AUTOMATIZACION INDUSTRIAL
+Luis Rey Santos Saucedo
+Victor Manuel Retana Castillo
+Gonzalez Roblero Neider
+GOMEZ MUNOZ ANA GABRIELA
+
+-----------------
+ING. MECANICA
+----------------
+Semestre 1
+Química
+Cálculo Diferencial
+Fundamentos De Investigación
+Dario Saucedo Blanco
+Taller De Ética
+De Leon Covarubias Beatriz Eugenia
+Metrología Y Normalización
+Pedro Celedonio Lopez Lara
+Dibujo Mecánico
+Semestre 2
+Probabilidad Y Estadística
+Antonio Hernandez Gaytan
+Cálculo Integral
+Álgebra Lineal
+Ingeniería De Materiales Metálicos
+Guia Tello Juan Carlos
+Algoritmos Y Programación
+Yolanda Mexicano Reyes
+AVENDANO MENDEZ ROBERTO PABLO
+Federico Quintana Maldonado
+Proceso Administrativo
+Semestre 3
+Estática
+Jose Santos Avendano Mendez
+Juan Alejandro Santana Aldape
+Cálculo Vectorial
+Calidad
+Federico Zertuche Luis
+Mancinas Perez Ricardo
+Rocio Blanco Gomez
+Ingeniería De Materiales No Metálicos
+Elias Servin Hernandez
+Guia Hernandez Luis Antonio
+Barraza De La Pena Claudia
+Electromagnetismo
+Benjamin Arellano Orozco
+Christian Aldaco Gonzalez
+Contabilidad Y Costos
+De La Pena Rivas Zenaida Yaneth
+Adan Garcia Briones
+Semestre 4
+Mecánica De Materiales I
+Nestor Saavedra Camacho
+Facusseh Valerio Cesar Augusto
+Ecuaciones Diferenciales
+Dinámica
+Luis Miguel Veloz Pachicano
+Edgar Benito Martinez Mercado
+Proceso De Manufactura
+Sistemas Electrónicos
+Karina Diaz Rosas
+Métodos Numéricos
+Semestre 5
+Mecánica De Materiales II
+Aguillon Malacara Alejandra Daniela
+Galvan Avalos Adolfo
+Mecanismos
+Cipriano Alvarado Gonzalez
+Julian Javier Hernandez De La Rosa
+Arturo Gerardo Guerrero Martinez
+Arredondo Valdez Juan
+Termodinámica
+Erendira Del Rocio Gamon Perales
+Luis Miguel Veloz Pachicano
+Mecánica De Fluidos
+Ana Laura Saucedo Jimenez
+Circuitos Y Máquinas Eléctricas
+Allende Sancho Gabriel
+Joaquin Antonio Alvarado Bustos
+Semestre 6
+Diseño Mecánico I
+Luis Carlos Orozco Valverde
+Nestor Saavedra Camacho
+Vibraciones Mecánicas
+Flores Campos Ruben
+Reyna Valdes Erendira Guadalupe
+Anaya Zavaleta Juan Carlos
+Luis Uriel Garcia Bustos
+Transferencia De Calor
+Rosa Hilda Estrada Ruiz
+Cesar Silva Beltran
+Sistemas E Instalaciones Hidráulicas
+Ana Laura Saucedo Jimenez
+Rosa Hilda Estrada Ruiz
+Instrumentación Y Control
+Gonzalez Roblero Neider
+Hernandez Gonzalez Gerardo
+Taller De Investigación I
+Nelly Abigail Rodriguez Rosales
+Gerardo Altamirano Guerrero
+Circuitos Hidráulicos Y Neumáticos
+Cecilia Mendoza Rivas
+Diseño Para Manufactura
+Jose Santos Avendano Mendez
+Ana Laura Saucedo Jimenez
+Semestre 7
+Diseño Mecánico II
+Guia Tello Juan Carlos
+Juan Antonio Guerrero Hernandez
+Higiene Y Seguridad Industrial
+Duran Gutierrez Jose De Jesus Salvador
+Hernandez Flores Luis Humberto
+Máquinas De Fluidos Compresibles
+Jose Maria Resendiz Vielma
+Luis Gerardo Sanchez Chavez
+Máquinas De Fluidos Incompresibles
+Edgar Benito Martinez Mercado
+Pedro Celedonio Lopez Lara
+Automatización Industrial
+Manuel Enrique Sandoval Lopez
+Luis Rey Santos Saucedo
+Taller De Investigación II
+Cisneros Morales Massiel Cristina
+Gerardo Altamirano Guerrero
+Manufactura Asistida Por Computadora
+Maria Del Socorro Marines Leal
+Miguel Alberto Marquez Armendariz
+Semestre 8
+Mantenimiento
+Luis Gerardo Sanchez Chavez
+Pedro Celedonio Lopez Lara
+Sistemas De Generación De Energía
+Luis Gerardo Sanchez Chavez
+Refrigeración Y Aire Acondicionado
+Cesar Silva Beltran
+Gestión De Proyectos
+Automatización De Procesos De Manufactura
+Hernandez Gonzalez Gerardo
+Victor Manuel Retana Castillo
+Semestre 9
+Diseño Del Producto
+Juan Alejandro Santana Aldape
+Luis Carlos Orozco Valverde
+Manufactura Para Ensamble
+Luis Carlos Orozco Valverde
+Pedro Celedonio Lopez Lara
+
+
+---------------
+ING. INDUSTRIAL
+---------------
+Semestre 1
+Fundamentos De Investigación
+Leza Sanchez Yuvizela
+Encina Rodriguez Rosario Adriana
+Raymundo Tovar Medina
+Eva Flores Rocha
+Taller De Ética
+PATRICIA ESPINOSA MARIA
+Cálculo Diferencial
+Taller De Herramientas Intelectuales
+Leticia De La Fuente Alvear
+Alejandra Ramos Valdes
+Sandra Yesika Fuentes Torres
+Chacon Gomez Jose Luis
+Química
+Dibujo Industrial
+Semestre 2
+Electricidad Y Electrónica Industrial
+Crispin Armando Mezquitic Yanez
+Flavio Rodriguez Vargas
+Francisco Ricardo Mata Garcia
+Ignacio Ruiz Hernandez
+Tovar Gonzalez Raymundo
+Alejandro Martinez Hernandez
+Miguel Angel Gonzalez Munoz
+Propiedad De Los Materiales
+Luis Alberto Hernandez Calderon
+RUIZ PENA VICTOR MATEO
+Villarreal Fuentes Brandon Osvaldo
+Pedro Lopez Martinez
+Ortiz Hernandez Maricela
+Cálculo Integral
+Ingeniería De Sistemas
+Ana Laura Robledo Corpus
+Garcia Her Perla Magdalena
+Eva Flores Rocha
+Aviles Garcia Cinthya Alejandra
+Fernandez Flores Jackeline Elizabeth
+Probabilidad Y Estadística
+Antonio Hernandez Gaytan
+Análisis De La Realidad Nacional
+Jose Luis Fraustro Castillo
+Jose Alberto Resendiz Flores
+Sandra Yesika Fuentes Torres
+Taller De Liderazgo
+Cazares Aguinaga Yesika Guadalupe
+Luis Manuel Ferniza Valdes
+Blanca Delia Ramirez Cisneros
+Semestre 3
+Metrología Y Normalización
+Juan Francisco Tovar Epifanio
+Santana Carrillo Jose Luis
+Guia Tello Juan Carlos
+Álgebra Lineal
+Cálculo Vectorial
+Economía
+Alejandra Cristina Cabral Mireles
+Jesus Alejandro De Leon Olvera
+Elsa Maria Lopez Garcia
+CASTILLO ZAMARRON BRENDA GRICELDA
+Estadística Inferencial I
+Paola Cabrera Silveyra
+Sergio Salas Anguiano
+Francisco Javier Rodriguez Sanchez
+Estudio Del Trabajo I
+OLIVARES LUNA ROBERTO
+DE LA CRUZ GUADARRAMA MONICA ALEJANDRA
+Cordova Ramos Carolina Isabel
+Marco Antonio Cantu Lopez
+Carlos Alberto Segovia Guardado
+Semestre 4
+Procesos De Fabricación
+Patricia Sheilla Costa
+Garcia Najera Jesus
+Arnoldo Solis Covarrubias
+Rodriguez Salazar Perla Patricia
+Física
+Roberto Enrique Gonzalez Munoz
+Lopez Guarin Gustavo
+Francisco Emmanuel Vargas Torres
+Algoritmos Y Lenguajes De Programación
+Yolanda Mexicano Reyes
+AVENDANO MENDEZ ROBERTO PABLO
+Federico Quintana Maldonado
+Investigación De Operaciones I
+Irma Cecilia Ruiz Ramirez
+Rosa Maria Monsivais Carrillo
+Gloria Suarez Valdes
+Alan Tijerina De La Rosa
+Jimenez Gomez Marco Aurelio
+Estadística Inferencial II
+Armando Jimenez Lizcano
+Ricardo Omar Garcia Solis
+Estudio Del Trabajo II
+Nadia Patricia Ramirez Santillan
+Elsa Carolina Beltran Gonzalez
+Lopez Pena Jose Angel
+Cordova Ramos Carolina Isabel
+Jose Guadalupe Flores Cardenas
+Higiene Y Seguridad Industrial
+Marco Antonio Cantu Lopez
+Carlos Alberto Segovia Guardado
+Elsa Carolina Beltran Gonzalez
+Ruben Velazquez Mora
+Duran Gutierrez Jose De Jesus Salvador
+Semestre 5
+Administración De Proyectos
+BETANCOURT VALERO ISIDRO
+Jose Guadalupe Flores Cardenas
+Gonzalez Torres Cecilia
+Victor Manuel Valdes Flores
+Gonzalez Delgado Jose Ignacio
+Gestión De Costos
+Ismael Barrientos Hurtado
+Raymundo Rodriguez Morales
+Administración De Operaciones I
+Judith Fraga Monsivais
+Thelma Esquivel Lopez
+Investigación De Operaciones II
+Eduardo Marroquin Espinoza
+Javier Galindres Coto
+Jose Guadalupe Flores Cardenas
+Control Estadístico De La Calidad
+Aurora Del Carmen Terrazas Hernandez
+Gloria Suarez Valdes
+Antonio Escobedo Bocardo
+Ergonomía
+Ruben Velazquez Mora
+Judith Fraga Monsivais
+Arturo Gamaliel Garcia Rodriguez
+Marco Antonio Cantu Lopez
+Semestre 6
+Taller De Investigación I
+Prado Lopez Victor Hugo
+Judith Fraga Monsivais
+Eva Flores Rocha
+Fernandez Flores Jackeline Elizabeth
+Olivares Vazquez Juan Vivian
+Martinez Banda Luis David
+Tavitas Tovar Saray Esmeralda
+Ingeniería Económica
+Armando Nuncio Gonzalez
+Administración De Operaciones II
+Alan Tijerina De La Rosa
+Simulación
+DE LA CRUZ GUADARRAMA MONICA ALEJANDRA
+Jose Guadalupe Flores Cardenas
+Melissa Valdez Dena
+Administración Del Mantenimiento
+Mayra Isabel Aviles Garcia
+Carlos Alberto Segovia Guardado
+Raymundo Tovar Medina
+Juan Carlos Padilla Hernandez
+Ignacio Ruiz Hernandez
+Mercadotecnia
+Marlen Elizabeth Gomez Garza
+MUNOZ CORONADO ERTZEL
+Maria Angelica Morales De La Garza
+Seminario De Negocios
+LOPEZ ARTEAGA MONICA PAULINA
+Lopez Pena Jose Angel
+Adriana Monserrat Gomez Ramos
+MONSIVAIS DE LA CRUZ JOSE ANGEL
+Semestre 7
+Taller De Investigación II
+Mayra Isabel Aviles Garcia
+Melissa Valdez Dena
+Mancinas Perez Ricardo
+Nayali Argelia Polina Mezquitic
+Planeación Financiera
+Cristina Vanessa Juarez Hernandez
+Ismael Barrientos Hurtado
+Laura Patricia Gonzalez Gaona
+Planeación Y Diseño De Instalaciones
+Rosa Maria Monsivais Carrillo
+Eduardo Marroquin Prado
+Cordova Ramos Carolina Isabel
+Sistemas De Manufactura
+Aurora Del Carmen Terrazas Hernandez
+CONTRERAS INIGUEZ KORINA LYLIANA
+Esteban De Jesus Tovar Sanchez
+Juan Carlos Padilla Hernandez
+Logística Y Cadena De Suministros
+Resendiz Flores Juan De Dios
+Javier Galindres Coto
+Aurora Del Carmen Terrazas Hernandez
+Abriega Juarez Ricardo
+Villegas Balderas Francisco
+Reynaldo Arias Vazquez
+Gestión De Los Sistemas De Calidad
+Gabriel Sanchez Villegas
+Juan Carlos Padilla Hernandez
+Mayra Isabel Aviles Garcia
+Ingeniería De Calidad
+Alan Tijerina De La Rosa
+Federico Zertuche Luis
+Ruiz Moreno Elena Del Carmen
+Tópicos De La Industria Automotriz I
+LOPEZ ARTEAGA MONICA PAULINA
+Eduardo Marroquin Espinoza
+Atayde Gonzalez Oscar
+Semestre 8
+Topicos De La Industria Automotriz
+Gabriel Sanchez Villegas
+Formulación Y Evaluación De Proyectos
+MONSIVAIS DE LA CRUZ JOSE ANGEL
+Moralba Rodriguez Sanchez
+MORENO GARCIA VERONICA ELIZABETH
+Relaciones Industriales
+Julieta Guadalupe Gonzalez Arias
+Luis Manuel Ferniza Valdes
+Baltazar Baena Moreno
+De La Cruz Valero Myrna Keren
+Tópicos De Optimización De Procesos
+Jesus Emanuel Garay Guerrero
+Eduardo Marroquin Espinoza
+Tópicos De Manufactura Avanzada
+Francisco Javier Torres Soto
+Jesus Amador Garza Garcia
+Manufactura Integrada Por Computadora
+Jesus Emanuel Garay Guerrero
+Ramiro Reyes Luna
+Montes Dorantes Pascual Noradino
+Juan Carlos Cisneros Torres
+Simulación Avanzada
+Ireta Sanchez Pedro Henoc
+Jesus Emanuel Garay Guerrero
+Juan Carlos Cisneros Torres
+Tópicos De La Industria Automotriz II
+Torres Hernandez Anakarem
+Victor Manuel Valdes Flores
+Topicos Avanzados De Ingenieria
+Francisco Javier Torres Soto
+Topicos De Inteligencia Artificial
+Fuentes Huerta Marco Antonio
+
+
+---------------------
+ING. ELECTRICA
+---------------------
+Semestre 1
+Cálculo Diferencial
+Pendiente Por Asignar
+Química
+Probabilidad Y Estadística
+Antonio Hernandez Gaytan
+Ruiz Carranza Leonardo Daniel
+Desarrollo Humano Integral
+Erika Griselda Mata Rios
+CASTILLO ZAMARRON YAJAIRA MIYOSHI VALENTINA
+Fundamentos De Investigación
+MALDONADO HERNANDEZ JUAN DE DIOS GERARDO
+Taller De Ética
+Semestre 2
+Cálculo Integral
+Mecánica Clásica
+ANTUNA GARCIA SALVADOR AARON
+Electromagnetismo
+DE LA PENA DURON AIDA
+Miguel Angel Gonzalez Munoz
+Corral Ruvalcaba Miguel Angel
+Oliver Renato Garcia Saucedo
+Ivan De Jesus Epifanio Lopez
+Tecnología De Los Materiales
+MALDONADO HERNANDEZ JUAN DE DIOS GERARDO
+Dibujo Asistido Por Computadora
+DE LA PENA FLORES ALMA LETICIA
+Comunicación Humana
+Cesar Garcia Gonzalez
+Semestre 3
+Cálculo Vectorial
+Álgebra Lineal
+Circuitos Eléctricos I
+DE LA PENA DURON AIDA
+Mediciones Eléctricas
+Saul Orzua Gonzalez
+Mecánica De Fluidos Y Termodinámica
+Luis Miguel Veloz Pachicano
+Rene Allende Mata
+Programación
+Federico Quintana Maldonado
+AVENDANO MENDEZ ROBERTO PABLO
+Semestre 4
+Ecuaciones Diferenciales
+Teoría Electromagnética
+DE LA PENA DURON AIDA
+Circuitos Eléctricos II
+Francisco Javier Gonzalez Olivares
+Najera Diaz Josue Isrrael
+Electrónica Analógica
+Joaquin Antonio Alvarado Bustos
+Física Moderna
+Alma Leticia Cazares Arreguin
+Métodos Numéricos
+Semestre 5
+Control I
+Cesar Gerardo Martinez Sanchez
+Cecilia Mendoza Rivas
+Equipos Mecánicos
+Transformadores
+Jose Angel Ruiz Aguilar
+Electrónica Digital
+Karina Diaz Rosas
+Instalaciones Eléctricas
+Daniel Ruiz Calderon
+Taller De Investigación I
+Fernando Alfonso Ruiz Moreno
+Luis Manuel Navarro Huitron
+Semestre 6
+Control II
+Yolanda Cepeda Rodriguez
+Obed Ramirez Gomez
+Sistemas De Iluminación
+Allende Sancho Gabriel
+Maquinas Sincrónicas Y De Cd
+Jose Angel Ruiz Aguilar
+Juan Ramon De Leon Pescina
+Motores De Inducción Y Especiales
+Jose Angel Ruiz Aguilar
+Instalaciones Eléctricas Industriales
+Saul Orzua Gonzalez
+Taller De Investigación II
+Velarde Sanchez Ada Karina
+MALDONADO HERNANDEZ JUAN DE DIOS GERARDO
+Zavala Torres Ma. Elida
+Subestaciones Eléctricas
+Saul Orzua Gonzalez
+Semestre 7
+Control De Máquinas Eléctricas
+Daniel Ruiz Calderon
+Mario Alberto Ponce Llamas
+Electrónica Industrial
+Rolando Rodriguez Pimentel
+Obed Ramirez Gomez
+Centrales Eléctricas
+Juan Pablo Nieto Gonzalez
+Modelado De Sistemas Eléctricos De Potencia
+Juan Pablo Nieto Gonzalez
+Tópicos Selectos De La Ingeniería Eléctrica I
+Hernandez Gonzalez Gerardo
+Calidad De La Energía Eléctrica
+Juan Pablo Nieto Gonzalez
+Tópicos De Ingeniaría Eléctrica
+Juan Pablo Nieto Gonzalez
+Semestre 8
+Instrumentación
+Cecilia Mendoza Rivas
+Gonzalez Roblero Neider
+Francisco Agustin Vazquez Esquivel
+Controlador Lógico Programable
+Mario Alberto Ponce Llamas
+Pruebas Y Mantenimiento Eléctrico
+Jorge Humberto Salas Rodriguez
+Legislación En Materia Eléctrica
+Allende Sancho Gabriel
+Gestión Empresarial Y Liderazgo
+Cavazos Coronado Mayela
+Tópicos Selectos De La Ingeniería Eléctrica II
+Juan Pablo Nieto Gonzalez
+Semestre 9
+Costos Y Presupuestos De Proyectos Eléctricos
+Horacio Tolentino Quilantan
+Coordinación De Protecciones De Seps
+Daniel Ruiz Calderon
+Detección Y Diagnóstico Inteligente De Fallas
+Cavazos Hernandez Enrique Alejandro
+
+
+
+----------------------------
+ING. ELECTRONICA
+----------------------------
+Semestre 1
+Cálculo Diferencial
+Mecánica Clásica
+ANTUNA GARCIA SALVADOR AARON
+Química
+Alma Leticia Cazares Arreguin
+Comunicación Humana
+Perez Solis Jose Del Carmen
+Jessica Guadalupe Valverde Nuncio
+Fundamentos De Investigación
+Zavala Torres Ma. Elida
+MALDONADO HERNANDEZ JUAN DE DIOS GERARDO
+Taller De Ética
+Jesus Esquivel Alonso
+Erika Griselda Mata Rios
+Semestre 2
+Cálculo Integral
+Probabilidad Y Estadística
+Antonio Hernandez Gaytan
+Lopez Guarin Gustavo
+Mediciones Eléctricas
+Fritsche Ramirez Ewald
+Tópicos Selectos De Física
+Christian Aldaco Gonzalez
+Lopez Guarin Gustavo
+Desarrollo Humano
+Semestre 3
+Cálculo Vectorial
+Electromagnetismo
+Oliver Renato Garcia Saucedo
+Ivan De Jesus Epifanio Lopez
+Miguel Angel Gonzalez Munoz
+Corral Ruvalcaba Miguel Angel
+DE LA PENA DURON AIDA
+Álgebra Lineal
+Física De Semiconductores
+Jesus Guerrero Contreras
+Felipe Alberto Machorro Fernandez
+Programación Estructurada
+Federico Emmanuel Rivera Torres
+Monica Lucia Ochoa Morales
+Semestre 4
+Ecuaciones Diferenciales
+Circuitos Eléctricos I
+Francisco Javier Gonzalez Olivares
+Najera Diaz Josue Isrrael
+Marco Legal De La Empresa
+Arturo Ceballos Tello
+Análisis Numérico
+Diodos Y Transistores
+Flores Sanmiguel Francisco
+Rolando Rodriguez Pimentel
+Felipe Alberto Machorro Fernandez
+Programación Visual
+Federico Emmanuel Rivera Torres
+Semestre 5
+Introducción A Las Telecomunicaciones
+DE LA ROSA H. LUZ JORGE AURELIO
+Circuitos Eléctricos II
+Francisco Javier Gonzalez Olivares
+Najera Diaz Josue Isrrael
+Teoría Electromagnética
+Yolanda Cepeda Rodriguez
+Diseño De Transistores
+Cesar Gerardo Martinez Sanchez
+Fernando Aguilar Gaona
+Diseño Digital
+Alejandro Benitez Gutierrez
+Desarrollo Profesional
+Garcia Muniz Maria Elena
+Semestre 6
+Control I
+Cecilia Mendoza Rivas
+Cesar Gerardo Martinez Sanchez
+Fundamentos Financieros
+Rosalva Alvarado Bustos
+Adan Garcia Briones
+Amplificadores Operacionales
+Cavazos Hernandez Enrique Alejandro
+Fernando Aguilar Gaona
+Diseño Digital Con Vhdl
+Pedro Quintanilla Contreras
+Taller De Investigación I
+Fernando Alfonso Ruiz Moreno
+Luis Manuel Navarro Huitron
+Máquinas Eléctricas
+Allende Sancho Gabriel
+Jose Angel Ruiz Aguilar
+Juan Ramon De Leon Pescina
+Obed Ramirez Gomez
+Potencia Fluídica
+Cecilia Mendoza Rivas
+Procesos De Fabricación De Materiales Semiconductores Y Circuitos Integrados
+Jesus Guerrero Contreras
+Semestre 7
+Control II
+Obed Ramirez Gomez
+Yolanda Cepeda Rodriguez
+Optoelectrónica
+SALDANA MORA HUITZILIHUITL
+Electrónica De Potencia
+Obed Ramirez Gomez
+Flores Sanmiguel Francisco
+Microcontroladores
+Pedro Quintanilla Contreras
+SALDANA MORA HUITZILIHUITL
+Taller De Investigación II
+Velarde Sanchez Ada Karina
+MALDONADO HERNANDEZ JUAN DE DIOS GERARDO
+Zavala Torres Ma. Elida
+Control De Máquinas Eléctricas
+Flores Sanmiguel Francisco
+Toribio Alfaro Garcia
+Cae Aplicado Al Diseño De Tarjetas Basadas En Semiconductores
+SALDANA MORA HUITZILIHUITL
+Semestre 8
+Control Digital
+Yolanda Cepeda Rodriguez
+Instrumentación
+Cecilia Mendoza Rivas
+Gonzalez Roblero Neider
+Francisco Agustin Vazquez Esquivel
+Controladores Lógicos Programables
+DE LA ROSA H. LUZ JORGE AURELIO
+Administración Gerencial
+Blanca Margarita Valdez Alvarez
+Desarrollo Y Evaluación De Proyectos
+Luevano Sifuentes Diana Yolanda
+Tópicos Selectos De Ingeniería Electrónica I
+Fundamentos Y Tecnología Aplicada En Robótica
+FERNANDEZ RAMIREZ KARLA IVONNE
+Ruiz Ramos Isaac
+Gerardo Jarquin Hernandez
+Semestre 9
+Curso Avanzado De Plc
+Miguel Angel Gonzalez Munoz
+DE LA ROSA H. LUZ JORGE AURELIO
+Tópicos Selectos De Ingeniería Electrónica II
+Jesus Guerrero Contreras
+Control Inteligente
+Cavazos Hernandez Enrique Alejandro
+
+
+
+
+
+-----------------------------------
+ING. GESTION Empresarial
+-----------------------------------
+Semestre 1
+Cálculo Diferencial
+Desarrollo Humano
+AVILES SALAZAR GERMAN FRANCISCO
+De La Pena Chapa Celia Irene
+Lizela Berenice Valdez Martinez
+Maria Del Sagrario Zamarripa Rodriguez
+Fundamentos De Gestión Empresarial
+Monica Angelica Hernandez Santana
+Blanca Delia Ramirez Cisneros
+Ricardo Luevanos Garcia
+Edna Elizabeth Hernandez Tapia
+Dinámica Social
+Baltazar Baena Moreno
+Alvarez Cordova Brisa Yadira
+Lizela Berenice Valdez Martinez
+Ricardo Luevanos Garcia
+Fundamentos De Física
+Roberto Enrique Gonzalez Munoz
+Ruiz Carranza Leonardo Daniel
+Emmanuel Flores Villa
+Pendiente Por Asignar
+Fundamentos De Química
+Alma Leticia Cazares Arreguin
+Semestre 2
+Software De Aplicación Ejecutivo
+Cálculo Integral
+Contabilidad Orientada A Los Negocios
+Sergio De Leon Pescina
+Alcantara Bueno Silvia Margarita
+De Leon Covarubias Ana Laura
+Jesus Alberto Picazo Rada
+Taller De Ética
+Claudia Cardenas Aguirre
+Legislación Laboral
+Azalia Roxana Villegas Balderas
+Angelica Ceballos Coronel
+Ceballos Valdez Hugo
+Jesus Arturo Martinez Sanchez
+Arturo Ceballos Tello
+Semestre 3
+Fundamentos De Investigación
+Marcela Perales Moreno
+Marco Legal De Las Organizaciones
+Jesus Arturo Martinez Sanchez
+Azalia Roxana Villegas Balderas
+Arturo Ceballos Tello
+Angelica Ceballos Coronel
+Ceballos Valdez Hugo
+Probabilidad Y Estadística Descriptiva
+Armando Jimenez Lizcano
+Costos Empresariales
+Rosalva Alvarado Bustos
+Cristina Vanessa Juarez Hernandez
+Agustin Antonio Galindo Siller
+Jose Luis Dena Sanchez
+Liliana Lopez Camacho
+Economía Empresarial
+Francisco David Cardenas Ledezma
+Gloria Maria Pina Villanueva
+Rogelio Salas Garza
+Elsa Maria Lopez Garcia
+Álgebra Lineal
+
+
+
+
+
+Semestre 4
+Estadística Inferencial I
+Francisco Javier Rodriguez Sanchez
+Paola Cabrera Silveyra
+Daniel Salas Rodriguez
+Instrumentos De Presupuestación Empresarial
+Liliana Badillo Luna
+Jesus Alberto Picazo Rada
+Ingeniería De Procesos
+Hily Geraldina Martinez Colunga
+Jose Alfredo Rodriguez Tovanche
+Raymundo Olivares Vazquez
+Habilidades Directivas I
+Alma Ciria Rodriguez Gomez
+Garcia Granados Gonzalo
+Diseño Organizacional
+Adriana Torres Ordaz
+Tomas Quintero Rosales
+Entorno Macroeconómico
+Francisco David Cardenas Ledezma
+Rogelio Salas Garza
+Moran De La Garza Daniel Issac
+Semestre 5
+Finanzas En Las Organizaciones
+Laura Patricia Gonzalez Gaona
+Gonzalez Narvaez Jesus Alejandro
+De Leon Covarubias Ana Laura
+De La Pena Suarez David Hector
+Jose Luis Dena Sanchez
+Estadística Inferencial II
+Ricardo Omar Garcia Solis
+Daniel Salas Rodriguez
+CABRERA NAVARRO MIGUEL ANGEL
+Gestión De La Producción I
+Reyna Cadena Luis Fernando
+Prado Bustillo Jaime
+Luevano Sifuentes Diana Yolanda
+Raymundo Olivares Vazquez
+Habilidades Directivas II
+De La Pena Chapa Celia Irene
+Julieta Guadalupe Gonzalez Arias
+Martha Torres Ordaz
+De La Cruz Valero Myrna Keren
+Taller De Investigación I
+Yadira Chaires Gonzalez
+Ana Ruth Betancourt Valero
+Virginia Julieta Aguirre Dominguez
+Alma Ciria Rodriguez Gomez
+Marcela Perales Moreno
+Alejandra Ramos Valdes
+Investigación De Operaciones
+Juan Francisco Martinez Gonzalez
+Maria Elena Berlanga Ortiz
+Victor Alfonso Izquierdo Cepeda
+Jesus Alejandro De Leon Olvera
+Mercadotecnia
+Anna Rocio Ramirez Torres
+Arias Guerrero Alejandro Elizer
+MUNOZ CORONADO ERTZEL
+Maria Teresa Perales Escobedo
+Semestre 6
+Ingeniería Económica
+Jesus Alejandro De Leon Olvera
+Ramirez Jaramillo Ana Laura
+Ruiz Marquez Erika Marina
+El Emprendedor Y La Innovación
+Martha Torres Ordaz
+Martinez De Los Santos Rosa Isela
+AGUIRRE PENA JONATHAN DANIEL
+Gestión De La Producción II
+Ania Guadalupe Sanchez Ruiz
+Raymundo Olivares Vazquez
+Gestión Del Capital Humano
+Belinda Ferniza Valdes
+Julieta Guadalupe Gonzalez Arias
+Alejandra Puente Flores
+Taller De Investigación II
+Virginia Julieta Aguirre Dominguez
+Yadira Chaires Gonzalez
+CONTRERAS CASTANEDA GUILLERMO ALEJANDRO
+Gestion Logistica
+Duran Aguilar Hector Angel
+Carlos Miguel Escobedo Flores
+Cota Aguirre Natgelli
+Sistemas De Gestión De Calidad
+Teresita Del Rosario Borrego Jimenez
+Semestre 7
+Plan De Negocios
+Ruiz Marquez Erika Marina
+Maria Emilia Rosas Ordaz
+Rogelio Sanchez Rodriguez
+Cadena De Suministros
+Cota Aguirre Natgelli
+Iliana Vera Davila
+Jesus Alejandro De Leon Olvera
+Gestión Estratégica
+De La Pena Chapa Celia Irene
+AGUIRRE PENA JONATHAN DANIEL
+SANCHEZ ANDRADE DAMIAN
+Sistemas De Información De Mercadotecnia
+DE LA ROSA GARCIA JORGE ERNESTO
+Arias Guerrero Alejandro Elizer
+De La Pena Lopez Jessica Janeth
+Gestión De Procesos De Manufactura Esbelta
+Casas Rodriguez Jesus Eduardo
+Jose Alfredo Rodriguez Tovanche
+Modelos De Simulación Y Logística
+Estrada Guerrero Mario
+Juan Francisco Martinez Gonzalez
+Gestion De Proyectos De Mejora Continua
+Juan Francisco Martinez Gonzalez
+Fundamentos De Core Tools
+Juan Francisco Martinez Gonzalez
+Semestre 8
+Administración De La Salud Y Seguridad Ocupacional
+Chacon Gomez Jose Luis
+Jose Luis Dena Sanchez
+Hiram Galan Jimenez
+Calidad Aplicada A La Gestión Empresarial
+Hiram Galan Jimenez
+Xitlalic Ibarra Salazar
+Mercadotecnia Electrónica
+Carlos Miguel Escobedo Flores
+Monica Angelica Hernandez Santana
+Arias Guerrero Alejandro Elizer
+Maria Angelica Morales De La Garza
+DE LA ROSA GARCIA JORGE ERNESTO
+Compras
+Raymundo Rodriguez Morales
+Tomas Quintero Rosales
+Mayela Berenice Luevano Sifuentes
+Desarrollo De Productos, Empaque, Embalaje Y Transportacion
+Victor Alfonso Izquierdo Cepeda
+Duran Aguilar Hector Angel
+Gonzalez Covarrubias Juan Antonio
+Factibilidad De Proyectos
+Rogelio Sanchez Rodriguez
+Semestre 9
+Desarrollo De Productos, Empaques Y Embalajes
+Juan Francisco Martinez Gonzalez
+Logística Y Aspectos Técnicos Del Comercio Exterior
+Gonzalez Covarrubias Juan Antonio
+Lucia Leticia Cuevas Sepulveda
+
+
+
+--------------------
+ING. Materiales
+--------------------
+Semestre 1
+Fundamentos De Investigación
+Dario Saucedo Blanco
+Salinas Coronado Mayra Alejandra
+Taller De Ética
+Erika Griselda Mata Rios
+Cálculo Diferencial
+Química
+Esteban Sanchez Valdes
+Catalina Perez Berumen
+Erendira Del Rocio Gamon Perales
+Dibujo Asistido Por Computadora
+Fundamentos De Administración
+Gonzalez Martinez Rosa Guadalupe
+Brenda Del Rocio Ibarra Gonzalez
+Semestre 2
+Probabilidad Y Estadística
+Metrología Y Normalización
+Guia Tello Juan Carlos
+Juan Francisco Tovar Epifanio
+Santana Carrillo Jose Luis
+Mecánica Clásica
+ANTUNA GARCIA SALVADOR AARON
+Cálculo Integral
+Álgebra Lineal
+Taller De Seguridad E Higiene
+Duran Gutierrez Jose De Jesus Salvador
+Gallegos Flores Luis Fidel
+Semestre 3
+Electricidad, Magnetismo Y Óptica
+Física Del Estado Solido
+Nelly Abigail Rodriguez Rosales
+Epsylon Erydani Mejia Martinez
+Cálculo Vectorial
+Mineralogía Y Obtención De Materiales
+Jose Refugio Parga Torres
+Luis Alberto Hernandez Calderon
+Rodriguez Salazar Perla Patricia
+Química Orgánica
+Catalina Perez Berumen
+Rodriguez Salazar Perla Patricia
+Semestre 4
+Caracterización Estructural
+Maria Elena Solis Martinez
+Dagoberto Vazquez Obregon
+Producción De Metales No Ferrosos
+Jose Refugio Parga Torres
+Esteban Sanchez Valdes
+Barraza De La Pena Claudia
+Ecuaciones Diferenciales
+Termodinámica Para Ingeniería En Materiales
+Alhondra Yokasta De Los Santos Vela
+Rocio Maricela Ochoa Palacios
+Materiales Poliméricos
+Rebeca Gonzalez Hernandez
+Comportamiento Mecánico De Materiales
+Dagoberto Vazquez Obregon
+Patricia Sheilla Costa
+Semestre 5
+Técnicas De Análisis
+Rebeca Gonzalez Hernandez
+Rene Allende Mata
+Diagramas De Equilibrio
+Epsylon Erydani Mejia Martinez
+Programación De Métodos Numéricos
+Lopez Guarin Gustavo
+Equilibrio Físico-Químico
+Alhondra Yokasta De Los Santos Vela
+Fenómenos De Transporte
+Análisis De Fallas Mecánicas
+Mario Rodriguez Reyes
+Semestre 6
+Taller De Investigación I
+Nelly Abigail Rodriguez Rosales
+Gerardo Altamirano Guerrero
+Solidificación
+SALAZAR ZERTUCHE MADELYNE
+Producción De Metales Ferrosos
+Jesus Ventura Valdes Flores
+Cinética
+Alhondra Yokasta De Los Santos Vela
+Transiciones De Fases
+Maria De Jesus Perez Lopez
+Cisneros Morales Massiel Cristina
+Corrosión Y Degradación
+Nelly Abigail Rodriguez Rosales
+Barraza De La Pena Claudia
+Tecnología De Las Arenas
+Jesus Benavente Morales
+Polímeros Avanzados
+Rebeca Gonzalez Hernandez
+Semestre 7
+Taller De Investigación II
+Cisneros Morales Massiel Cristina
+Gerardo Altamirano Guerrero
+Tratamientos Térmicos
+Maria De Jesus Perez Lopez
+Gerardo Altamirano Guerrero
+Procesos De Manufactura
+Jesus Ventura Valdes Flores
+Materiales Cerámicos
+Esteban Sanchez Valdes
+Jose Alonso Diaz Guillen
+Calidad
+Rocio Blanco Gomez
+Ireta Sanchez Pedro Henoc
+Federico Zertuche Luis
+Introducción A Los Nanomateriales
+Elias Servin Hernandez
+Rene Allende Mata
+Modelos Y Diseño De Colada
+Jose De Jesus Zamora Garcia
+Jesus Benavente Morales
+Ingeniería De Superficies
+Semestre 8
+Formulación Y Evaluación De Proyectos
+Miguel Angel Sanchez Gonzalez
+Eva Flores Rocha
+Materiales Compuestos
+Oswaldo Burciaga Diaz
+Epsylon Erydani Mejia Martinez
+Introducción A Los Biomateriales
+Zully Matamoros Veloza
+Perla Janet Resendiz Hernandez
+Fundiciones De Hierro
+Maria De Jesus Perez Lopez
+Jose Luis Serrano Toledo
+Fundiciones De Aleaciones No Ferrosas
+Jose De Jesus Zamora Garcia
+Diseño Y Simulación
+Luciano Eliezer Ramirez Vidaurri
+Estadística Aplicada
+Aurora Del Carmen Terrazas Hernandez
+Ruiz Moreno Elena Del Carmen
+Materiales Avanzados
+Oswaldo Burciaga Diaz
+Semestre 9
+Simulación De Procesos De Fundición
+Luciano Eliezer Ramirez Vidaurri
+Materiales Cerámicos Y Compuestos Avanzados
+Zully Matamoros Veloza

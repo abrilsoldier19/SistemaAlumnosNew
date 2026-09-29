@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="card card-primary">
-        <div class="card-header"><h4>Reset Password</h4></div>
+        <div class="card-header"><h4>Restablecer la contraseña</h4></div>
 
         <div class="card-body">
             @if (session('status'))
