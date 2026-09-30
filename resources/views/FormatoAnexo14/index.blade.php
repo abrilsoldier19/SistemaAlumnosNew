@@ -53,11 +53,11 @@
             <div class="action-bar print-hidden">
                 <div class="btn-group">
                     @can('crear-rol')
-                        <a href="{{ route('FormatoAnexo14.create') }}" class="btn btn-primary">
+                        <a href="{{ route('FormatoAnexo14.create') }}" class="btn-registro-nuevo">
                             <i class="fa-solid fa-plus"></i> Nuevo Registro
                         </a>
                     @endcan
-                    <button type="button" class="btn btn-success" onclick="printTable()">
+                    <button type="button" class="btn-imprimirTabla" onclick="printTable()">
                         <i class="fa-solid fa-print"></i> Imprimir tabla
                     </button>
                 </div>
@@ -204,5 +204,5 @@
 @endsection
 
 @section('css')
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+@vite(['resources/css/vistas/vista-index-formato14.css', 'resources/js/app.js'])
 @endsection
